@@ -55,7 +55,7 @@ public class Produto implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "precoVenda")
-    private long precoVenda;
+    private float precoVenda;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idProduto")
     private Collection<Movimento> movimentoCollection;
 
@@ -97,11 +97,11 @@ public class Produto implements Serializable {
         this.quantidade = quantidade;
     }
 
-    public long getPrecoVenda() {
+    public float getPrecoVenda() {
         return precoVenda;
     }
 
-    public void setPrecoVenda(long precoVenda) {
+    public void setPrecoVenda(float precoVenda) {
         this.precoVenda = precoVenda;
     }
 
